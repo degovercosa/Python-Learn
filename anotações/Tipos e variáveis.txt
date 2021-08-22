@@ -1,0 +1,7 @@
+Como é feita a declaração:
+	var = value
+O tipo do valor da variável não depende da declaração, a linguagem é flexível e você pode alterar o tipo do valor em qualquer momento.
+ex:
+	var = peixe
+	var = 2
+a variável vai assumir o segundo valor.
