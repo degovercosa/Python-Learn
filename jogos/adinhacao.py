@@ -5,8 +5,10 @@ print("#################################")
 numero_secreto = 76
 
 tentativas = int(input("Insira o número de tentativas: "))
+rodada = 1
 
-while (tentativas > 0):
+while (tentativas >= rodada):
+    print("Rodada: ", rodada)
 
     chute = int(input("Digite o seu número: "))
 
@@ -22,8 +24,7 @@ while (tentativas > 0):
         print("você errou, seu chute foi maior que o número secreto")
     else:
         print("você errou, seu chute foi menor que o número secreto")
-    tentativas -= 1
-    print("O número de tentativas restantes é: ", tentativas)
+    rodada += 1
 
 print("############")
 print("Fim de jogo!")
