@@ -3,19 +3,13 @@ print("Bem vindo ao jogo de advinhação !")
 print("#################################")
 
 numero_secreto = 76
+total_de_tentativas = int(input("Insira o número de tentativas: "))
 
-tentativas = int(input("Insira o número de tentativas: "))
-rodada = 1
-
-while (tentativas >= rodada):
-    print("Rodada: ", rodada)
-
+for rodada in range (0, total_de_tentativas):
+    print("Rodada {} de {} tentativas".format(rodada, total_de_tentativas))
     chute = int(input("Digite o seu número: "))
-
     acertou = chute == numero_secreto
-
     maior = chute > numero_secreto
-
     print("você digitou: ", chute)
 
     if (acertou):
@@ -24,7 +18,6 @@ while (tentativas >= rodada):
         print("você errou, seu chute foi maior que o número secreto")
     else:
         print("você errou, seu chute foi menor que o número secreto")
-    rodada += 1
 
 print("############")
 print("Fim de jogo!")
