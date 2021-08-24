@@ -3,16 +3,27 @@ import random
 print("#################################")
 print("Bem vindo ao jogo de advinhação !")
 print("#################################")
-
+# definição do número a ser encontrado
 numero_secreto = random.randint(1, 100)
 
-total_de_tentativas = int(input("Insira o número de tentativas de 1 a 20: "))
+# definição do nível de dificuldade
+print("Insira o nível de dificuldade")
+total_de_tentativas = 0
+while (total_de_tentativas < 5):
+    dificuldade = int(input("fácil -> (1) médio -> (2) difícil -> (3):"))
+    if dificuldade == 1:
+        total_de_tentativas = 20
+        break
+    elif dificuldade == 2:
+        total_de_tentativas = 10
+    elif dificuldade == 3:
+        total_de_tentativas = 5
+    else:
+        print("Dificuldade inválida, tente novamente")
 
+# definição do corpo do jogo
 for rodada in range (0, total_de_tentativas):
     print(f"Rodada {rodada + 1} de {total_de_tentativas} tentativas")
-    if (total_de_tentativas > 20 or total_de_tentativas < 1):
-        print("Você digitou número de tentativas fora do escopo")
-        break
     chute = int(input("Digite um número de 1 a 100: "))
     if(chute < 1 or chute > 100):
         print("Você chutou um número fora do escopo")
