@@ -30,8 +30,7 @@ def jogar_forca():
             if (chute.upper() == letra.upper()):
                 print(f"Seu chute foi a letra: {chute}")
                 print(f"Encontrei a letra {chute} na posição {index2}")
-                palavra_encontrada.pop(index2)
-                palavra_encontrada.insert(index2, chute)
+                palavra_encontrada[index2] = chute
             else:
                 erros +=1
                 if (erros == len(palavra_secreta)):
@@ -51,6 +50,7 @@ def jogar_forca():
         if (resultado.upper() == palavra_secreta.upper()):
             print("Parabéns, você acertou a palavra")
             acertou = True
+        print("########## Fim da tentativa ##########")
 
     print("\n")
     print("############")
