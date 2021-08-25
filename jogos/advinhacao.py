@@ -1,6 +1,7 @@
 import random
 def jogar_advinhacao():
-    print("#################################")
+
+        print("#################################")
     print("Bem vindo ao jogo de advinhação !")
     print("#################################")
     # definição do número a ser encontrado e da pontuação
@@ -47,3 +48,5 @@ def jogar_advinhacao():
     print("############")
     print("Fim de jogo!")
     print("############")
+if (__name__ == "__main__"):
+    jogar_advinhacao()
